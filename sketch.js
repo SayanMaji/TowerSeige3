@@ -4,7 +4,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Constraint = Matter.Constraint;
-
+var backgroundImg;
 function preload()
 {
 	getTime();
@@ -66,7 +66,8 @@ function setup() {
 function draw() {
 	Engine.update(engine)
   rectMode(CENTER);
-  background(bg);
+  if(backgroundImg){ 
+       background(bg);}
   ground1.display();
  ground2.display();
 
